@@ -1,0 +1,37 @@
+.favoritesMain{
+    display: flex;
+    margin-top: 4rem;
+    margin-left: 7.5rem;
+    flex-wrap: wrap;
+}
+
+.favoritesContent{
+display: grid;
+place-items: center;
+margin-right: 30px;
+margin-bottom: 3rem;
+}
+
+.favoritesContent img{
+    width: 23rem;
+    border-radius: 10px;
+    height: 14rem;
+}
+
+.favoritesContent h3{
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.favoritesContent button{
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: gold;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,73 @@
+.header {
+    background-image: url("../assets/home-design.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(4px) grayscale(80%);
+    position: relative;
+}
+
+.productOverall{
+    display:flex;
+    margin-top: 40px;
+    margin-left: 120px;
+}
+
+.productImg{
+    width: 24rem;
+    height: 13rem;
+    border-radius: 8px;
+}
+
+.product{
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin-right: 25px;
+    margin-bottom: 35px;
+
+}
+
+.product h3{
+    text-transform: capitalize;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.product p{
+    font-size: 18px;
+}
+
+.featuredToggleLogo{
+    position: absolute;
+    margin-top:-3.8rem ;
+
+}
+
+.featuredLogo{
+    display: flex;
+    font-size: 30px;
+    width: 6.5rem;
+    justify-content: space-between;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.product:hover .featuredLogo{
+    visibility: visible;
+}
+
+.logoMagnify, .logoBasket{
+    background-color: gold;
+    color: white;
+    padding: 9px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.logoMagnify:hover, .logoBasket:hover{
+background-color:rgb(230, 215, 131) ;
+}

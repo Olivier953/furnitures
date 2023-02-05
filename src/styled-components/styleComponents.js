@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 ////////////////////////////////////////////HEADER////////////////////////////////////////////
@@ -17,24 +18,40 @@ list-style:none;
 width:19rem;
 justify-content: space-between;
 font-size:25px;
-margin-top:30px;
+margin-top:32px;
 font-weight:bold;
+`
+const StyledLink = styled(Link)`
+color: white;
+text-decoration: none;
+font-size:27px;
 
-li{
-    cursor: pointer;
-}
-
-li:hover{
-    color:gold;
+:hover{
+color:gold
 }
 `
 
+const StyledLinkButton = styled(Link)`
+color:white;
+text-decoration:none;
+padding:10px;
+background-color:transparent;
+border: 2px solid gold;
+border-radius:5px;
+text-transform:uppercase;
+font-weight:bold;
+
+:hover{
+    color:gold;
+    background-color:white
+}
+`
 const HeaderTitle = styled.div`
 font-size: 45px;
 font-weight:bold;
-font-family:'Lobster', cursive;
+font-family:'Lobster';
 margin-left:-60px;
-margin-top:12px;
+margin-top:12px;    
 `
 
 const HeaderRight = styled.div`
@@ -77,24 +94,7 @@ h1{
 p{
     font-size:40px;
     color:gold;
-}
-
-button{
-    padding:10px;
-    width:11rem;
-    margin-top:15px;
-    border-radius:5px;
-    border: gold 1px solid;
-    background-color: transparent;
-    font-size: 20px;
-    color:white;
-    text-transform:uppercase;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color:white;
-    color:gold;
+    margin-bottom:30px
 }
 `
 
@@ -103,6 +103,7 @@ button:hover{
 const HeaderToggleContent = styled.div`
 top:0;
 position:fixed;
+z-index:10;
 right: 0;
 background-color: white;
 width: 24rem;
@@ -126,10 +127,8 @@ p{
 h3{
     font-family: "lobster";
     font-size:30px;
-
 }
 `
-
 const ToggleBottom = styled.div`
 
     h3{
@@ -159,29 +158,15 @@ const ToggleBottom = styled.div`
 ////////////////////////////////////////////HOME FEATURED////////////////////////////////////////////
 
 const FeaturedContent = styled.div`
-display:grid;
-place-items:center;
-margin-top:20px;
+margin-top:30px;
+margin-bottom:20px;
 
-button{
-    padding:5px;
-        width:9rem;
-        height:2rem;
-        border:none;
-        border-radius:5px;
-        cursor: pointer;
-        background-color:gold;
-        color:white;
-        font-weight: bold;
-        font-size:15px;
-        text-transform:uppercase;
-}
 `
-
 const FeaturedTitle = styled.div`
 display : flex;
 width:9rem;
 justify-content: space-between;
+margin-left:40rem;
 
 span{
     font-size:35px;
@@ -192,9 +177,45 @@ span{
 h1{
     margin-top:1px;
 }
+`
+const StyledFeaturedBtn = styled(Link)`
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor: pointer;
+    background-color:gold;
+    color:white;
+    font-weight: bold;
+    font-size:18px;
+    text-transform:uppercase;
+    margin-left:41rem;
+    margin-bottom:20px;
+    text-decoration:none;
+    `
 
+    ////////////////////////////////////////////HEADER////////////////////////////////////////////
+
+const StyledLinkOtherPages = styled(Link)`
+color: black;
+text-decoration: none;
+font-size:27px;
+
+:hover{
+color:gold
+}
 `
 
+const StyledLogoMagnify = styled(Link)`
+color: white;
+width:30px;
+display:grid;
+place-items:center;
+`
+
+const StyledLinkFavorites = styled(Link)`
+color : black;
+text-decoration:none;
+`
 
 export {HeaderContent, 
         HeaderLeft, 
@@ -208,4 +229,10 @@ export {HeaderContent,
         ToggleBottom,
         FeaturedContent,
         FeaturedTitle,
+        StyledLink,
+        StyledLinkButton,
+        StyledFeaturedBtn,
+        StyledLinkOtherPages,
+        StyledLogoMagnify,
+        StyledLinkFavorites
     }

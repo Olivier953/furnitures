@@ -1,8 +1,10 @@
-import { FeaturedContent, FeaturedTitle } from "./styleComponents"
+import { FeaturedContent, FeaturedTitle, StyledFeaturedBtn } from "../styled-components/styleComponents"
 
-function Featured({furnitures, loading, error}) {
-    console.log(furnitures)
+import styles from "../styles/Home.module.css"
+import Logos from "./Logos"
 
+function Featured({furnitures, loading, error, productDetail}) {
+  console.log(productDetail)
   return (
     <FeaturedContent>
     <FeaturedTitle>
@@ -10,7 +12,7 @@ function Featured({furnitures, loading, error}) {
         <h1>Featured</h1>
     </FeaturedTitle>
 
-    <div className="products">
+    <div className={styles.productOverall}>
       {loading && <h3>Wait a moment please</h3>}
             {error && (
                 <div>{`There is a problem fetching the post data - ${error}`}</div>
@@ -20,16 +22,22 @@ function Featured({furnitures, loading, error}) {
       furnitures &&
       furnitures.map((furniture) => {
         return (
-          <div key={furniture.id}>
-            <img src={furniture.fields.id} alt="" />
-            <p>{furniture.fields.image}</p>
+          <div className={styles.product} key={furniture.id}>
+            <img src={furniture.fields.image[0].url} alt="furnitures" className={styles.productImg} />
+            <h3>{furniture.fields.name}</h3>
+            <p>$ {furniture.fields.price/100}</p>
+            
+            <Logos furnitures={furnitures}/>
+            
           </div>
         )
       })
     }
+    
     </div>
 
-    <button>Show all</button>
+    <StyledFeaturedBtn to="/products">Show all</StyledFeaturedBtn>
+
     </FeaturedContent>
   )
 }

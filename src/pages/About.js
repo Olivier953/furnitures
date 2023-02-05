@@ -1,7 +1,15 @@
+import { useState } from "react"
+import Banner from "../components/Banner"
+import HeaderOtherPages from "../components/HeaderOtherPages"
 
 function About() {
+const [product, setProduct] = useState("About")
+
   return (
-    <div>About</div>
+    <>
+  <HeaderOtherPages/>
+  <Banner product={product}/>
+    </>
   )
 }
 

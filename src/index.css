@@ -7,3 +7,27 @@
 .header-content-home{
   color: white;
 }
+
+.header-title-color, .basket{
+color: black;
+}
+
+.product-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-img{
+  width: 19rem;
+  height: 12rem;
+  border-radius: 8px;
+}
+
+.favorites{
+  position: absolute;
+  font-size: 40px;
+  color:white;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}

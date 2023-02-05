@@ -1,0 +1,43 @@
+.toggleMenuContent{
+    position: absolute;
+    left: 20px;
+}
+
+.toggleMenuContent img{
+    width: 7rem;
+    border-radius: 5px;
+    height: 4rem;
+}
+
+.toggleMenuContent h3{
+    text-transform: capitalize;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.toggleMenuContent button{
+    padding :2px;
+    font-size: 10px;
+    border-radius: 5px;
+    border: none;
+    text-transform: capitalize;
+    background-color: gold;
+    cursor: pointer;
+}
+
+.toggleAll{
+    margin-left: 12rem;
+}
+
+.toggleRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 4.5rem;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.toggleRight h3{
+    margin-left: 4px;
+}

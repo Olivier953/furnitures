@@ -1,0 +1,28 @@
+.singleProductMain{
+    display: grid;
+    place-items: center;
+    margin-bottom: 30px;
+}
+
+.singleProductContent{
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+    width: 40rem ;
+}
+
+.singleProductContent img{
+    width: 40rem;
+    border-radius: 10px;
+    height: 23rem;
+}
+
+.singleProductContent h3{
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.singleProductContent p{
+    text-align: justify;
+    margin-top: 10px;
+}

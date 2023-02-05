@@ -1,24 +1,24 @@
 import { AiOutlineShoppingCart } from "react-icons/ai"
-import { StyledLink } from "../styled-components/styleComponents"
 import { HeaderContent, HeaderLeft, HeaderRight, HeaderRightBasket, HeaderTitle, HeaderRightBasketNumber } from "../styled-components/styleComponents"
+import { StyledLinkOtherPages } from "../styled-components/styleComponents"
 
-function Header(props) {
+export default function HeaderOtherPages(props) {
 
   return (
     <HeaderContent className="header-content-home">
         <HeaderLeft className="header-left-home">
-            <li><StyledLink to="/home">Home</StyledLink></li>
-            <li><StyledLink to="/products">Product</StyledLink></li>
-            <li><StyledLink to="/about">About</StyledLink></li>
+            <li><StyledLinkOtherPages to="/home">Home</StyledLinkOtherPages></li>
+            <li><StyledLinkOtherPages to="/products">Product</StyledLinkOtherPages></li>
+            <li><StyledLinkOtherPages to="/about">About</StyledLinkOtherPages></li>
         </HeaderLeft>
 
-        <HeaderTitle>
+        <HeaderTitle className="header-title-color">
             comfy
         </HeaderTitle>
 
         <HeaderRight>
 
-        <HeaderRightBasket onClick={props.handleClick}>
+        <HeaderRightBasket className="basket" onClick={props.handleClick}>
             <AiOutlineShoppingCart />
         </HeaderRightBasket>
 
@@ -29,5 +29,3 @@ function Header(props) {
     </HeaderContent>
   )
 }
-
-export default Header
